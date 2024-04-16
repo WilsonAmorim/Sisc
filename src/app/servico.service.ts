@@ -5,55 +5,20 @@ import { LocalizarCliente } from './localizar-cliente';
   providedIn: 'root'
 })
 export class ServicoService {
-  localizarClienteList: LocalizarCliente[] = [
-    {
-      'id': 1,
-      'cpfCnpj': '24630004572',
-      'nome':' Wilson Amorim',
-      'endereco': 'Travessa Ibiapaba',
-      'bairro': 'Stiep',
-      'cep': '41770180',
-      'cidade': 'Salvador',
-      'uf': 'BA',
-      'email': 'wilamsa@gmail.com',
-      'celular': '71986827844'
-    },
-    {
-      'id': 2,
-      'cpfCnpj': '24630004572',
-      'nome':' Wilson Amorim',
-      'endereco': 'Travessa Ibiapaba',
-      'bairro': 'Stiep',
-      'cep': '41770180',
-      'cidade': 'Salvador',
-      'uf': 'BA',
-      'email': 'wilamsa@gmail.com',
-      'celular': '71986827844'
-    },
-    {
-      'id': 1,
-      'cpfCnpj': '24630004572',
-      'nome':' Wilson Amorim',
-      'endereco': 'Travessa Ibiapaba',
-      'bairro': 'Stiep',
-      'cep': '41770180',
-      'cidade': 'Salvador',
-      'uf': 'BA',
-      'email': 'wilamsa@gmail.com',
-      'celular': '71986827844'
-    }
-  ];
+  url = 'http://localhost:3000/locations';
 
-  getAllLocalizarClientes(): LocalizarCliente[] {
-    return this.localizarClienteList;
+  async getAllLocalizarClientes(): Promise<LocalizarCliente[]> {
+    const data = await fetch(this.url);
+    return await data.json() ?? [];
   }
 
-  getLocalizarClienteById(id: number): LocalizarCliente | undefined {
-    return this.localizarClienteList.find(localizarCliente => localizarCliente.id === id);
+  async getLocalizarClienteById(id: number): Promise<LocalizarCliente | undefined> {
+    const data = await fetch(`${this.url}/${id}`);
+    return await data.json() ?? {};
   }
 
-  submitApplication(firstName: string, lastName: string, celular: string, email: string) {
-    console.log(`Homes application received: firstName: ${firstName}, lastName: ${lastName}, email: ${celular}, email: ${email}.`);
+  submitApplication(nome: string, cpfCnpj: string, celular: string, email: string) {
+    console.log(nome, cpfCnpj, celular, email);
   }
 
 }

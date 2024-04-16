@@ -16,7 +16,7 @@ import { LocalizarCliente } from '../../localizar-cliente';
       <h2 class="section-heading">Informe os Dados do Cliente</h2>
       <form [formGroup]="applyForm" (submit)="submitApplication()">
         <label for="first-name">CPF/CNPJ</label>
-        <input id="first-name" type="text" formControlName="cpfcnpj">
+        <input id="first-name" type="text" formControlName="cpfCnpj">
 
         <label for="last-name">Nome</label>
         <input id="last-name" type="text" formControlName="nome">
@@ -39,7 +39,7 @@ export class ClienteNovoComponent {
 
 
   applyForm = new FormGroup({
-    cpfcnpj: new FormControl(''),
+    cpfCnpj: new FormControl(''),
     nome: new FormControl(''),
     celuar: new FormControl(''),
     email: new FormControl('')
@@ -47,7 +47,7 @@ export class ClienteNovoComponent {
 
   submitApplication() {
     this.servicoService.submitApplication(
-      this.applyForm.value.cpfcnpj ?? '',
+      this.applyForm.value.cpfCnpj ?? '',
       this.applyForm.value.nome ?? '',
       this.applyForm.value.celuar ?? '',
       this.applyForm.value.email ?? ''

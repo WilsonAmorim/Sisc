@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ServicoService } from '../../servico.service';
 import { LocalizarCliente } from '../../localizar-cliente';
 
@@ -10,7 +9,6 @@ import { LocalizarCliente } from '../../localizar-cliente';
   standalone: true,
   imports: [
     CommonModule,
-    ReactiveFormsModule
   ],
   template: `<article>
   <section class="listing">
@@ -58,12 +56,11 @@ export class DetailsComponent {
   localizarCliente: LocalizarCliente | undefined;
 
 
-
   constructor() {
-      const localizarClienteId = Number(this.route.snapshot.params['id']);
-      this.localizarCliente = this.servicoService.getLocalizarClienteById(localizarClienteId);
+      const localizarClienteId = parseInt(this.route.snapshot.params['id'], 10);
+      this.servicoService.getLocalizarClienteById(localizarClienteId).then(localizarCliente => {
+        this.localizarCliente = localizarCliente;
+      });
   }
-
-
 
 }

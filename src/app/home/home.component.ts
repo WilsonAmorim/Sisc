@@ -16,8 +16,8 @@ import { RouterLink } from '@angular/router';
   template: `
   <section class='main-section'>
     <form>
-      <input type='text' placeholder='Entrar com Cliente'>
-      <button class='primary' type='button'>Buscar</button>&nbsp;&nbsp;&nbsp;
+      <input type="text" placeholder="Entrar com Nome do Cliente" #filter>
+      <button class="primary" type="button" (click)="filterResults(filter.value)">Buscar</button>&nbsp;&nbsp;&nbsp;
 
       <a [routerLink]="['/cliente-novo']" routerLinkActive="active" >Cliente novo</a>
 
@@ -27,7 +27,7 @@ import { RouterLink } from '@angular/router';
     <ul>
       <li>
     <app-cliente
-      *ngFor="let localizarCliente of localizarClienteList"
+      *ngFor="let localizarCliente of filteredLocalizacaoList"
       [localizarCliente]='localizarCliente'><br />
     </app-cliente>
       </li>
@@ -41,9 +41,24 @@ export class HomeComponent {
 
   localizarClienteList: LocalizarCliente[] = [];
   servicoService: ServicoService = inject(ServicoService);
+  filteredLocalizacaoList: LocalizarCliente[] = [];
 
   constructor() {
-    this.localizarClienteList = this.servicoService.getAllLocalizarClientes();
+    this.servicoService.getAllLocalizarClientes().then((localizarClienteList: LocalizarCliente[]) => {
+      this.localizarClienteList = localizarClienteList;
+      this.filteredLocalizacaoList = localizarClienteList;
+    });
+  }
+
+  filterResults(text: string) {
+    if (!text) {
+      this.filteredLocalizacaoList = this.localizarClienteList;
+      return;
+    }
+
+    this.filteredLocalizacaoList = this.localizarClienteList.filter(
+      localizarCliente => localizarCliente?.nome.toLowerCase().includes(text.toLowerCase())
+    );
   }
 
 }

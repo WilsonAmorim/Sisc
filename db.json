@@ -2,8 +2,8 @@
   "locations": [
     {
       "id": 1,
+      "nome":" Jose Amorim",
       "cpfCnpj": "24630004572",
-      "nome":" Wilson Amorim",
       "endereco": "Travessa Ibiapaba",
       "bairro": "Stiep",
       "cep": "41770180",
@@ -14,8 +14,8 @@
     },
     {
       "id": 2,
+      "nome":" Maria Amorim",
       "cpfCnpj": "24630004572",
-      "nome":" Wilson Amorim",
       "endereco": "Travessa Ibiapaba",
       "bairro": "Stiep",
       "cep": "41770180",
@@ -25,9 +25,57 @@
       "celular": "71986827844"
     },
     {
-      "id": 1,
+      "id": 3,
+      "nome":" Pedro Amorim",
       "cpfCnpj": "24630004572",
+      "endereco": "Travessa Ibiapaba",
+      "bairro": "Stiep",
+      "cep": "41770180",
+      "cidade": "Salvador",
+      "uf": "BA",
+      "email": "wilamsa@gmail.com",
+      "celular": "71986827844"
+    },
+    {
+      "id": 4,
+      "nome":" Jaciara Amorim",
+      "cpfCnpj": "24630004572",
+      "endereco": "Travessa Ibiapaba",
+      "bairro": "Stiep",
+      "cep": "41770180",
+      "cidade": "Salvador",
+      "uf": "BA",
+      "email": "wilamsa@gmail.com",
+      "celular": "71986827844"
+    },
+    {
+      "id": 5,
+      "nome":" João Amorim",
+      "cpfCnpj": "24630004572",
+      "endereco": "Travessa Ibiapaba",
+      "bairro": "Stiep",
+      "cep": "41770180",
+      "cidade": "Salvador",
+      "uf": "BA",
+      "email": "wilamsa@gmail.com",
+      "celular": "71986827844"
+    },
+    {
+      "id": 6,
+      "nome":" Tereza Silva",
+      "cpfCnpj": "24630004572",
+      "endereco": "Travessa Ibiapaba",
+      "bairro": "Stiep",
+      "cep": "41770180",
+      "cidade": "Salvador",
+      "uf": "BA",
+      "email": "wilamsa@gmail.com",
+      "celular": "71986827844"
+    },
+    {
+      "id": 7,
       "nome":" Wilson Amorim",
+      "cpfCnpj": "24630004572",
       "endereco": "Travessa Ibiapaba",
       "bairro": "Stiep",
       "cep": "41770180",
@@ -36,6 +84,7 @@
       "email": "wilamsa@gmail.com",
       "celular": "71986827844"
     }
+
 
   ]
 }
