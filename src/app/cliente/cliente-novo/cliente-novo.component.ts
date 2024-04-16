@@ -29,7 +29,6 @@ import { LocalizarCliente } from '../../localizar-cliente';
         <button type="submit" class="primary">Salvar</button>
       </form>
     </section>
-
 </article>`,
   styleUrl: './cliente-novo.component.css'
 })

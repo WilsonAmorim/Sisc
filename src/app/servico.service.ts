@@ -55,5 +55,5 @@ export class ServicoService {
   submitApplication(firstName: string, lastName: string, celular: string, email: string) {
     console.log(`Homes application received: firstName: ${firstName}, lastName: ${lastName}, email: ${celular}, email: ${email}.`);
   }
-  constructor() { }
+
 }

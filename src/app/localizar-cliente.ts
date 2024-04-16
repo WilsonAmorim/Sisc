@@ -10,5 +10,4 @@ export interface LocalizarCliente {
   uf: string;
   email: string;
   celular: string;
-
 }

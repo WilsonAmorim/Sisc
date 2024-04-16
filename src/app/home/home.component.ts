@@ -32,7 +32,6 @@ import { RouterLink } from '@angular/router';
     </app-cliente>
       </li>
     </ul>
-
   </section>
   `,
   styleUrls: ['./home.component.css'],

@@ -15,7 +15,6 @@ import { RouterLink } from '@angular/router';
    {{ localizarCliente.cpfCnpj }} - {{ localizarCliente.nome}} - {{localizarCliente.celular }}
    </a>
   </section>
-
   `,
   styleUrl: './cliente.component.css'
 })

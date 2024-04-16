@@ -47,11 +47,8 @@ import { LocalizarCliente } from '../../localizar-cliente';
   <th>Uf</th>
     <td>{{localizarCliente?.uf}}</td>
   </tr>
-
 </table>
-
   </section>
-
 </article>`,
   styleUrl: './details.component.css'
 })
