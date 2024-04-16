@@ -1,0 +1,41 @@
+{
+  "locations": [
+    {
+      "id": 1,
+      "cpfCnpj": "24630004572",
+      "nome":" Wilson Amorim",
+      "endereco": "Travessa Ibiapaba",
+      "bairro": "Stiep",
+      "cep": "41770180",
+      "cidade": "Salvador",
+      "uf": "BA",
+      "email": "wilamsa@gmail.com",
+      "celular": "71986827844"
+    },
+    {
+      "id": 2,
+      "cpfCnpj": "24630004572",
+      "nome":" Wilson Amorim",
+      "endereco": "Travessa Ibiapaba",
+      "bairro": "Stiep",
+      "cep": "41770180",
+      "cidade": "Salvador",
+      "uf": "BA",
+      "email": "wilamsa@gmail.com",
+      "celular": "71986827844"
+    },
+    {
+      "id": 1,
+      "cpfCnpj": "24630004572",
+      "nome":" Wilson Amorim",
+      "endereco": "Travessa Ibiapaba",
+      "bairro": "Stiep",
+      "cep": "41770180",
+      "cidade": "Salvador",
+      "uf": "BA",
+      "email": "wilamsa@gmail.com",
+      "celular": "71986827844"
+    }
+
+  ]
+}
